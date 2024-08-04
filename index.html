@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Farming Agent</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        #main-content {
+            display: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            background-color: rgb(200,200,200);
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Login Page -->
+    <section id="login" class="flex justify-center items-center min-h-screen bg-gray-100">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
+            <h2 class="text-2xl font-bold mb-4 text-center">Login</h2>
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-green-600 text-white p-2 rounded-md hover:bg-green-700">Login</button>
+                </div>
+            </form>
+            <p class="mt-4 text-center">Don't have an account? <a href="#" id="show-signup" class="text-green-600">Sign Up</a></p>
+        </div>
+    </section>
+
+    <!-- Signup Page -->
+    <section id="signup" class="flex justify-center items-center min-h-screen bg-gray-100 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
+            <h2 class="text-2xl font-bold mb-4 text-center">Sign Up</h2>
+            <form id="signup-form" class="space-y-4">
+                <div>
+                    <label for="signup-email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="signup-email" name="signup-email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+                <div>
+                    <label for="signup-password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="signup-password" name="signup-password" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-green-600 text-white p-2 rounded-md hover:bg-green-700">Sign Up</button>
+                </div>
+            </form>
+            <p class="mt-4 text-center">Already have an account? <a href="#" id="show-login" class="text-green-600">Login</a></p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header class="bg-green-600 text-white p-4 text-center">
+            <h1 class="text-3xl font-bold">Soil Farming Agent</h1>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-4">
+                    <li><a class="text-white hover:text-gray-300" href="#home">Home</a></li>
+                    <li><a class="text-white hover:text-gray-300" href="#about">About</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn hover:text-gray-300" id="soil">Soil</button>
+                        <div class="dropdown-content" id="soil_content">
+                            <a href="Loam soil.jpg">Loam Soil</a>
+                            <a href="clay soil.jpeg">Clay Soil</a>
+                            <a href="sandy soil.jpeg">Sandy Soil</a>
+                        </div>
+                    </li>
+                    <li><a class="text-white hover:text-gray-300" href="#distributors">Distributors</a></li>
+                    <li><a class="text-white hover:text-gray-300" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="p-4">
+            <section id="home" class="mb-8">
+                <h2 class="text-2xl font-bold mb-2">Welcome to Soil Farming Agent</h2>
+                <p>Helping you find the best crops for your soil type.</p>
+            </section>
+            <section id="about" class="mb-8">
+                <h2 class="text-2xl font-bold mb-2">About Us</h2>
+                <p>Our platform is designed to empower farmers with the knowledge they need to make informed decisions about their crops and soil. By leveraging advanced agricultural insights, we help you achieve better yields and sustainable farming practices.</p>
+            </section>
+            <section id="soil-details" class="mb-8">
+                <h2 class="text-2xl font-bold mb-2">Soil Details</h2>
+                <div class=" flex flex-col">
+                    <a href="https://en.wikipedia.org/wiki/Loam" class="text-black hover:text-blue-500"><h class="font-semibold underline ">Loam Soil</h>  is a balanced mix of sand, silt, and clay, making it highly fertile and easy to work with. It has good drainage properties and retains moisture well, which makes it ideal for a wide variety of crops. Vegetables such as tomatoes, peppers, beans, carrots, and lettuce thrive in loam soil. It's also well-suited for growing fruits like strawberries, melons, and blueberries, as well as grains such as wheat and corn. Additionally, herbs like basil, mint, and rosemary flourish in loam soil due to its nutrient-rich composition.
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Clay" class="text-black hover:text-blue-500"><h class="font-semibold underline">Clay Soil</h>  has a high clay content, which gives it a dense and heavy texture. This type of soil retains water and nutrients effectively but often has poor drainage, making it prone to becoming waterlogged. Despite its challenges, clay soil is excellent for certain crops. Vegetables like broccoli, Brussels sprouts, cabbages, and kale perform well in clay soil because they benefit from its nutrient-holding capacity. Fruits such as apples, pears, and plums also do well in clay soil. Grains like rice and oats, which require substantial water, are suitable for clay soil conditions. Additionally, trees and shrubs like willow, birch, and dogwood can thrive in clay soil.
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Sand" class="text-black hover:text-blue-500"><h class="font-semibold underline">Sandy Soil</h> characterized by its high sand content, has excellent drainage but poor nutrient retention. It tends to be dry and low in fertility, requiring regular fertilization and watering. Despite these challenges, certain crops grow well in sandy soil. Vegetables such as carrots, radishes, potatoes, and lettuce are well-suited to sandy soil due to their ability to grow quickly and their preference for well-drained conditions. Fruits like watermelons, peaches, and peanuts also thrive in sandy soil. Herbs such as thyme, rosemary, and oregano, which prefer drier conditions, do well in sandy soil. Root crops like sweet potatoes and beets can also be successfully grown in sandy soil due to its loose texture, which allows roots to develop easily.
+                    </a>
+                </div>
+            </section>
+            <section id="distributors" class="mb-8">
+                <h2 class="text-2xl font-bold mb-2">Distributors</h2>
+                <div id="distributor-details" class="space-y-4">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold">Green Farm Supplies</h3>
+                        <p>Location: 123 Green Street, Farmville</p>
+                        <p>Contact: (123) 456-7890</p>
+                        <p>Email: contact@greenfarm.com</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold">AgriTech Solutions</h3>
+                        <p>Location: 456 Tech Avenue, AgriCity</p>
+                        <p>Contact: (987) 654-3210</p>
+                        <p>Email: info@agritech.com</p>
+                    </div>
+                   
+                </div>
+            </section>
+            <section id="contact" class="mb-8">
+                <h2 class="text-2xl font-bold mb-2">Contact</h2>
+                <form id="contact-form" class="space-y-4 bg-white p-4 rounded-lg shadow-md">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-green-600 text-white p-2 rounded-md hover:bg-green-700">Send Message</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <div class="flex items-center justify-center h-screen bg-black overflow-hidden relative">
+            <div class="flex flex-col items-center">
+                <!-- first circle -->
+                <div class="rounded-full bg-red-400 h-36 w-36 orbit absolute top-1 left-1/3 shadow-red-400 opacity-50"></div>
+                <!-- profile -->
+                <div class="border-2 box-content h-96 w-56 p-4 border-gray-600 flex flex-col items-center bg-gray-800 gap-6 rounded-xl">
+                    <div>
+                        <img src="profile pic .jpg" alt="shubhrat" class="rounded-full h-48 w-48 object-cover ">
+                    </div>
+                    <div class="text-white text-xl font-bold">Shubhrat Shailwal</div>
+                    <div class="text-yellow-50">G.B.P.U.A&T</div>
+                    <div>
+                        <button class="border text-xs p-1.5 mr-1 hover:bg-gray-300" id="share-button">
+                            <i class="fa-solid fa-share"></i> Share My Profile
+                        </button>
+                        <button class="border text-xs p-1.5 hover:bg-gray-300">Follow Me</button>
+                    </div>
+                </div>
+                <!-- second circle -->
+                <div class="rounded-full bg-blue-600 h-44 w-44 norbit absolute bottom-1 left-1/2 opacity-50"></div> 
+            </div>
+        </div>
+
+        <footer class="bg-green-600 text-white p-4 text-center">
+            <p>&copy; 2024 Soil Farming Agent</p>
+        </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
